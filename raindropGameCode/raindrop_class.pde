@@ -1,7 +1,6 @@
 class Raindrop {
   PVector loc, vel, acc;
   int diam;
-  int count = 50;
   
   Raindrop(float x, int y) {
     diam = 50;
