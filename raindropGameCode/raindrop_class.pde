@@ -1,16 +1,16 @@
 class Raindrop {
   PVector loc, vel, acc;
   int diam;
-  
+
   Raindrop(float x, int y) {
-    diam = 50;
+    diam = 25;
     loc = new PVector(x,y);
     vel = PVector.random2D();
     acc = new PVector(0,.2);  
     vel.mult(.1);
 }
   void display () {
-    fill(0);
+    fill(0, 200, 255);
     noStroke();
     ellipse(loc.x,loc.y,diam,diam);
   }
@@ -25,6 +25,6 @@ class Raindrop {
     vel.add(acc);
  }
   boolean isInContactWith(PVector heh) {
-  return heh.dist(loc)<=diam/2;
-}
+  return heh.dist(loc)<=diam;
+  }
 }
